@@ -1,14 +1,21 @@
 // Import any required models here
-const Example = require("../models/user");
+const User = require("../models/user");
 
 // Define your service methods
-exports.getExamples = async () => {
-  const examples = await Example.find();
+exports.getUsers = async () => {
+  const users = await User.find();
 
-  return examples;
+  return users;
 };
 
-exports.createExample = async (name) => {
-  const example = new Example({ name: name });
-  return await example.save();
+exports.createUser = async (data) => {
+  console.log(data);
+  const user = new User(data);
+  console.log(user);
+  return await user.save();
+};
+
+exports.getUserByEmail = async (email) => {
+  const user = await User.findOne({ email });
+  return user;
 };
