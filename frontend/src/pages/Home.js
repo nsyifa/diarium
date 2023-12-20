@@ -7,6 +7,7 @@ import Searchbar from "../components/Searchbar";
 import { ProfileIcon } from "../components/ProfileIcon";
 import PlusButton from "../components/PlusButton";
 import Book from "../components/Book";
+import AddBook from "../components/AddBook";
 import BookRed from "../components/BookRed";
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
         <div className="px-28 gap-20 w-full h-full flex flex-row row-start-3 row-end-[10]">
           <Book title="2022 DIARY" />
           <BookRed title="2023 DIARY" />
+          <AddBook />
         </div>
         <div className="flex flex-row w-full h-full row-start-[10] row-span-2 justify-end items-start">
           <PlusButton />
